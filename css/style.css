@@ -313,9 +313,8 @@ button:focus{
 }
 /* Adjust the height of the logo to look professional */
 .navbar-logo {
-    height: 100px; /* Adjust this value as needed */
+    height: 60px; /* Ensures the logo is not too large */
     object-fit: contain;
-    margin: 10px 0; /* Adjust the margin to center the logo vertically */
 }
 
 /* Ensure the header has enough padding to accommodate the logo */
@@ -328,14 +327,17 @@ button:focus{
 	padding: 1px 0px;
 }
 
-.top-header{
-	background: #ffffff;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	margin: 0 auto;
-	z-index: 20;
+.top-header {
+    background-color: url('/images/nav8.png'); /* Adjust path as necessary */
+    background-size: cover; /* Cover the entire navbar area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeating the image */
+    color: white; /* Adjust text color for visibility */
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
 .top-header .navbar .navbar-collapse ul li a {
@@ -552,8 +554,12 @@ button:focus{
 }
 
 
-.about-box{
-	padding: 70px 0px;
+.about-box {
+    background-image: url('/images/about1.jpg'); /* Adjust path as necessary */
+    background-size: cover; /* Cover the entire section area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeating the image */
+    padding: 70px 0;
 }
 
 .title-box{
@@ -688,8 +694,48 @@ button:focus{
 -------------------------------------------------------------------*/
 
 .services-box {
-    padding: 70px 0px;
-    background-color: #fff;
+    background-image: url('/images/services1.jpg'); /* Adjust path as necessary */
+    background-size: cover; /* Cover the entire section area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeating the image */
+    padding: 70px 0;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* This ensures that all children (service-item) are of equal height */
+}
+
+.service-item {
+    background: var(--primary-color); /* Red background for contrast */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Arranges h3 and p in a column */
+}
+
+.service-item h3 {
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: var(--secondary-color);
+    font-size: 16px;
+    line-height: 1.6;
+    flex-grow: 1; /* Allows the paragraph to expand and fill the available space */
+}
+
+.title-box h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 45x;
+    margin-bottom: 50px;
 }
 
 .effect-service {
@@ -807,9 +853,11 @@ figure.effect-service:hover {
 
 .gallery-box {
     padding: 70px 0px 120px;
+    background-image: url('/images/gallery1.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
 }
-
-
 
 .gallery-box ul li {
     position: relative;
@@ -846,10 +894,6 @@ figure.effect-service:hover {
     top: 100%;
     opacity: 0;
     transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
 }
 
 .gallery-box ul li a .overlay {
@@ -866,10 +910,6 @@ figure.effect-service:hover {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
 }
 
 .gallery-box ul li a:hover::before {
@@ -1218,7 +1258,11 @@ figure.effect-service:hover {
 -------------------------------------------------------------------*/
 
 .contact-box{
-	padding: 70px 0px;
+	padding: 70px 0px 120px;
+    background-color: #f1eded; /* Path to your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 .left-contact h2{
@@ -1246,7 +1290,7 @@ figure.effect-service:hover {
 .dit-right h4 {
 
     font-size: 16px;
-    color: #3a4149;
+    color: #000000;
     font-weight: 500;
     margin: 0;
     padding: 0;
@@ -1332,30 +1376,132 @@ select.form-control:not([size]):not([multiple]){
 	color: red;
 }
 
-.footer-box {
-    background: #ccc;
-    padding: 20px 0;
-}
-
-.footer-box .footer-company-name {
-
+.info_section {
+    padding: 75px 0;
+    background-color: #0a0f43;
     text-align: center;
-    margin: 0px;
-    color: #333;
-    font-size: 13px;
-    font-weight: 400;
-    padding-top: 2px;
-
-}
-
-.footer-box .footer-company-name a {
-    color: #333;
-    text-decoration: underline !important;
-}
-
-.footer-box .footer-company-name a:hover {
-    color: #e91327;
-}
+    color: #fff;
+  }
+  
+  .info_section h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  
+  .info_section .social-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 25px;
+  }
+  
+  .info_section .social-box .box {
+    background-color: #ffffff;
+    padding: 5px 15px;
+  }
+  
+  .info_section a {
+    margin: 0 5px;
+    color: #0355cc;
+  }
+  
+  .info_section a i {
+    font-size: 18px;
+  }
+  
+  .info_section a:hover {
+    color: green;
+  }
+  
+  .info_items a {
+    position: relative;
+  }
+  
+  .info_items .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  
+  .info_items .item .img-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    line-height: 80px;
+    background-color: #0355cc;
+    color: #ffffff;
+  }
+  
+  .info_items .item .img-box i {
+    font-size: 24px;
+  }
+  
+  .info_items .item p {
+    margin-top: 25px;
+    color: #fff;
+    margin-bottom: 0;
+    background-color: #0a0f43;
+  }
+  
+  .info_items .item:hover .img-box {
+    background-color: red;
+  }
+  
+  .info_items {
+    position: relative;
+  }
+  
+  .info_items::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    width: 75%;
+    height: 1px;
+    background-color: #fff;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  
+  /* footer section*/
+  .footer_section {
+    background-color: #0a0f43;
+  }
+  
+  .footer_section p {
+    margin: 0;
+    padding: 25px 0;
+    color: #ffffff;
+    text-align: center;
+    border-top: 0.8px solid #ffffff;
+  }
+  
+  .footer_section a {
+    color: inherit;
+  }
+  
+  /* end footer section*/
+  /*# sourceMappingURL=style.css.map */
 
 
 
